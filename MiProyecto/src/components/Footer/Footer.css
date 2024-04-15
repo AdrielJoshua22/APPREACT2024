@@ -8,6 +8,10 @@
     max-width: 1200px;
     margin: auto;
     padding: 0 10px;
+    width: 100vw;
+    left: 0;
+    flex: 1;
+    
   }
   
   .footer-content {
