@@ -1,12 +1,14 @@
-import { useState } from 'react'
+
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import {Contador} from './components/Contador/Contador'
 import { Footer } from './components/Footer/Footer'
 import NavBar from './components/Menu/NavBar'
 
+
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
     <>
@@ -25,11 +27,11 @@ function App() {
           count is {count}
         </button> */}
         <p>
-       
+      
         </p>
       </div>
       <p className="read-the-docs">
-        
+        <Contador value={0}/>
       </p>
       <Footer/>
     </>
