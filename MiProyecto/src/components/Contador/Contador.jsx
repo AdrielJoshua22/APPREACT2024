@@ -1,25 +1,16 @@
-import React from 'react'
-import { useState } from 'react'
+import { useCounter } from '../../Hooks/useCounter'
 
-export const Contador = ({value}) => {
-    const [contador,setContador]= useState(value)
 
-    const handleClick = ()=>{
-        setContador(contador +1)
+export const Contador = () => {
 
-    }
-   return (
-    <div>
-      <h1>Apreta el botton</h1>
-      <p>{contador}</p>
-      <button onClick={handleClick}>
-        botton
-      </button>
-    </div>
+  const {contador,incrementar,decrementar,resetear} = useCounter(0)
+
+  return(
+    <>
+    <h1>Contador: {contador}</h1>
+    <button  onClick={() => incrementar()}>+1</button>
+    <button  onClick={() => resetear()}>Reset</button>
+    <button  onClick={() => decrementar()}>-1</button>
+    </>
   )
 }
-
-
-
-
-

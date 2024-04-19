@@ -2,9 +2,10 @@
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import {Contador} from './components/Contador/Contador'
 import { Footer } from './components/Footer/Footer'
 import NavBar from './components/Menu/NavBar'
+import { Contador } from './components/contador/contador'
+
 
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
         </p>
       </div>
       <p className="read-the-docs">
-        <Contador value={0}/>
+    <Contador></Contador>
       </p>
       <Footer/>
     </>
