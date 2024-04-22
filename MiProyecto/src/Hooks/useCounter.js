@@ -22,4 +22,3 @@ export const useCounter = (valorInicial = 0) => {
     }
 }
 
-
