@@ -3,18 +3,18 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Footer } from './components/Footer/Footer'
-import NavBar from './components/Menu/NavBar'
 import { Contador } from './components/contador/contador'
+import NavBar from './components/Menu/NavBar'
 
 
 
 function App() {
- 
+
 
   return (
     <>
       <div>
-        <NavBar/>
+   <NavBar/>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -24,17 +24,14 @@ function App() {
       </div>
       <h1>Este es mi portafolio React 2024</h1>
       <div className="card">
-       {/*  <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button> */}
         <p>
-      
+
         </p>
       </div>
       <p className="read-the-docs">
-    <Contador></Contador>
+        <Contador></Contador>
       </p>
-      <Footer/>
+      <Footer />
     </>
   )
 }
