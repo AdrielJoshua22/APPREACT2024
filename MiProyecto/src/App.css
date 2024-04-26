@@ -1,9 +1,17 @@
  #root {
-  max-width: auto;
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
+
+.nav, .footer {
+  width: 100%;
+}
+
+
+
 
 .logo {
   height: 6em;

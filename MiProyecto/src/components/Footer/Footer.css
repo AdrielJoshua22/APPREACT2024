@@ -1,13 +1,15 @@
 .footer {
-  background-color: #333;
+  background-color: #ffffff;
   padding: 10px 0;
-  color: #fff;
+  color: #650000;
+  width: 100%;
 }
 
 .container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 10px;
+  background-color: red ;
+  max-width: 100%;
+  
+ 
 }
 
 .footer-content {
@@ -19,11 +21,12 @@
 .footer-column {
   flex: 1 1 1 300px;
   margin-bottom: 10px;
+  max-width: 100%;
   
 }
 
 .footer-column h3 {
-  color: #fcf3f3;
+  color: #630000;
 }
 
 .footer-column ul {
@@ -37,7 +40,7 @@
 }
 
 .footer-column ul li a {
-  color: #fff;
+  color: #270202;
   text-decoration: none;
 }
 
@@ -47,7 +50,7 @@
 
 .social-icons a {
   margin-right: 20px;
-  color: #fff;
+  color: #7e3b3b;
   font-size: 30px;
 }
 
