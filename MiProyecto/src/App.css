@@ -1,66 +1,10 @@
- #root {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.navBar {
+  background-color: #ffffff; /* Color de fondo del navbar */
+  color: #000000; /* Color del texto en el navbar */
+  padding: 10px 0; /* Espacio interior en la parte superior e inferior del navbar */
+  width: 100%; /* Ancho del navbar (ocupa todo el ancho de la pantalla) */
+  left: 0; /* Posiciona el navbar a la izquierda de la pantalla */
+  top: 0; /* Posiciona el navbar en la parte superior de la pantalla */
+  position: fixed; /* Fija el navbar en su posición incluso al hacer scroll */
+  max-width: 100%; /* Asegura que el navbar no exceda el ancho de la pantalla */
 }
-
-.nav, .footer {
-  width: 100%;
-}
-
-
-
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-
-.nav.p{
-  font-size: 20px;
-  color: red;
-
-}
-/* @import url('https://fonts.googleapis.com/css2? family= Montserrat:ital,wght@0,300;1,400 & display=swap');
-
- h1{
-  font-size: 1000px;
-  font-family:  'Montserrat', sans-serif;
-  text-align: center;
-  
-} 
- */

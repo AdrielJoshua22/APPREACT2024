@@ -13,8 +13,8 @@ function App() {
     <>
 
        <NavBar /> 
-
-      <Contador></Contador>
+{/* 
+      <Contador></Contador> */}
 
       <Footer />
     </>

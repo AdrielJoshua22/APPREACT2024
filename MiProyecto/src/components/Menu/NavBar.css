@@ -1,41 +1,10 @@
-.navbar {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    width: 100%;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 100%;
-    margin: 0 ;
-    padding: 0;
-  }
-  
-  .navbar-brand {
-    font-weight: bold;
-    font-size: 24px;
-  }
-  
-  .navbar-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  .navbar-item {
-    margin-right: 10px;
-  }
-  
-  .navbar-item a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .navbar-item a:hover {
-    color: #ccc;
-  }
-  
+.navBar {
+  background-color: #ffffff; /* Color de fondo del navbar */
+  color: #000000; /* Color del texto en el navbar */
+  padding: 10px 0; /* Espacio interior en la parte superior e inferior del navbar */
+  width: 100%; /* Ancho del navbar (ocupa todo el ancho de la pantalla) */
+  left: 0; /* Posiciona el navbar a la izquierda de la pantalla */
+  top: 0; /* Posiciona el navbar en la parte superior de la pantalla */
+  position: fixed; /* Fija el navbar en su posición incluso al hacer scroll */
+  max-width: 100%; /* Asegura que el navbar no exceda el ancho de la pantalla */
+}
