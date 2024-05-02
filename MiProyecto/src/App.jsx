@@ -14,7 +14,9 @@ function App() {
     <>
 
       <NavBar />
+      <br />
       <ItemListContainer />
+      <br />
       <Footer />
     </>
   )
