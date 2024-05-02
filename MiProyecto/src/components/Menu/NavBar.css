@@ -4,6 +4,8 @@
   padding: 10px 0; /* Espacio interior en la parte superior e inferior del navbar */
   width: 100%; /* Ancho del navbar (ocupa todo el ancho de la pantalla) */
   left: 0; /* Posiciona el navbar a la izquierda de la pantalla */
+  right: 0;
+  box-sizing: border-box;
   top: 0; /* Posiciona el navbar en la parte superior de la pantalla */
   position: fixed; /* Fija el navbar en su posición incluso al hacer scroll */
   max-width: 100%; /* Asegura que el navbar no exceda el ancho de la pantalla */

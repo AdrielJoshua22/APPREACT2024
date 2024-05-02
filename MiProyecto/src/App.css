@@ -6,5 +6,6 @@
   left: 0; /* Posiciona el navbar a la izquierda de la pantalla */
   top: 0; /* Posiciona el navbar en la parte superior de la pantalla */
   position: fixed; /* Fija el navbar en su posición incluso al hacer scroll */
+  z-index: 1000;
   max-width: 100%; /* Asegura que el navbar no exceda el ancho de la pantalla */
 }
