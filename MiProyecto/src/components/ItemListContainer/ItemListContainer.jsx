@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { mFetch } from "../../utils/mFetch"
 import './ItemListContainer.css'
+import { Contador } from "../contador/contador"
 
 
 
@@ -43,6 +44,7 @@ import './ItemListContainer.css'
                                                         </div>
                                                         <div className="card-footer">
                                                             <button className="btn btn-outline-dark">Detalle</button>
+                                                            <Contador/>
                                                         </div>
                                                     </div>
                     ) 

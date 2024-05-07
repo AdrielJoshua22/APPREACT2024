@@ -7,9 +7,6 @@ let productos = [
 
 export const mFetch = () =>{
     return new Promise((res, rej)=>{
-        // acciones 
-        // condition ? resuelto() : rechazado()
-        // rechazado("No te puedo devolver la plata")
         setTimeout(()=>{
             res(productos)
         }, 1000)
