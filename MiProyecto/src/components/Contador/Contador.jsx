@@ -1,6 +1,5 @@
 import { useCounter } from '../../Hooks/useCounter'
 
-
 export const Contador = () => {
 
   const {contador,incrementar,decrementar,resetear} = useCounter(0)
@@ -8,9 +7,10 @@ export const Contador = () => {
   return(
     <>
     <h1>Contador: {contador}</h1>
-    <button  onClick={() => decrementar()}>-1</button>
-    <button  onClick={() => resetear()}>Reset</button>
-    <button  onClick={() => incrementar()}>+1</button>
+    <button onClick={() => decrementar()}>-1</button>
+    <button onClick={() => resetear()}>Reset</button>
+    <button onClick={() => incrementar()}>+1</button>
+    <button onClick >Agregar a carrito</button>
     </>
   )
 }
