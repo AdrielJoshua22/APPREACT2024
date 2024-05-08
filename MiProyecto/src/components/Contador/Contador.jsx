@@ -8,7 +8,7 @@ export const Contador = () => {
 
   return(
     <Container className='contador' >
-    <h1>Contador: {contador}</h1>
+    <h3>Contador: {contador}</h3>
     <button className='contador' onClick={() => decrementar()}>-1</button>
     <button  className='contador' onClick={() => resetear()}>Reset</button>
     <button  className='contador' onClick={() => incrementar()}>+1</button>

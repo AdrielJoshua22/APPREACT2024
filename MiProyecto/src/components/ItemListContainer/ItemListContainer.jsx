@@ -25,32 +25,25 @@ import { Contador } from "../contador/contador"
     //map <- nuevo array transformadio mediante una función transformadora
     // [1,2,3,4,5,6,7] <- map <- [<li key=1 >1</li>, <li key=2 >2</li>, <li key=3 >3</li>, ....]
     return (
-        <div className="card m-3"
-       style={{
-            display: "flex",
-            flexDirection: 'row',
-            flexWrap: "wrap"
-        }}>
-            
+        <div className="card-container">
             { isLoading ?
-                    <h2>Cargando...</h2>
+                <h2>Cargando...</h2>
                 : 
-                    productos.map( ({id, foto, name, price, categoria}) =>  <div key={id} className="card w-25">
-                                                        <img src={foto} className="card-img-top" alt="imagen-card" />
-                                                        <div className="card-body">
-                                                            <h6>Nombre: {name}</h6>
-                                                            <label>Precio: {price}</label>
-                                                            <label>Categoria: {categoria}</label>
-                                                        </div>
-                                                        <div className="card-footer">
-                                                            <button className='contador'>Detalle</button>
-                                                            <Contador/>
-                                                        </div>
-                                                    </div>
-                    ) 
+                productos.map( ({id, foto, name, price, categoria}) =>  
+                    <div key={id} className="card">
+                        <img src={foto} className="card-img-top" alt="imagen-card" />
+                        <div className="card-body">
+                            <h6 className="nombre">Nombre: {name}</h6>
+                            <label className="precio">Precio: {price}</label>
+                            <label className="categoria">Categoria: {categoria}</label>
+                        </div>
+                        <div className="card-footer">
+                            <button className="detalle">Detalle</button>
+                            <Contador/>
+                        </div>
+                    </div>
+                ) 
             }
-            
         </div>
     )
 }
-
