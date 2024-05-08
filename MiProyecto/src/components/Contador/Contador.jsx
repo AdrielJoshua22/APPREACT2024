@@ -1,16 +1,18 @@
+import { Container } from 'react-bootstrap'
 import { useCounter } from '../../Hooks/useCounter'
+import './contador.css'
 
 export const Contador = () => {
 
   const {contador,incrementar,decrementar,resetear} = useCounter(0)
 
   return(
-    <>
+    <Container className='contador' >
     <h1>Contador: {contador}</h1>
-    <button onClick={() => decrementar()}>-1</button>
-    <button onClick={() => resetear()}>Reset</button>
-    <button onClick={() => incrementar()}>+1</button>
-    <button onClick >Agregar a carrito</button>
-    </>
-  )
+    <button className='contador' onClick={() => decrementar()}>-1</button>
+    <button  className='contador' onClick={() => resetear()}>Reset</button>
+    <button  className='contador' onClick={() => incrementar()}>+1</button>
+    <button  className='contador' onClick >Agregar a carrito</button>
+    </Container>
+  ) 
 }

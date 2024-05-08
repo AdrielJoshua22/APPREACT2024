@@ -43,7 +43,7 @@ import { Contador } from "../contador/contador"
                                                             <label>Categoria: {categoria}</label>
                                                         </div>
                                                         <div className="card-footer">
-                                                            <button /* className="btn btn-outline-dark" */>Detalle</button>
+                                                            <button className='contador'>Detalle</button>
                                                             <Contador/>
                                                         </div>
                                                     </div>
