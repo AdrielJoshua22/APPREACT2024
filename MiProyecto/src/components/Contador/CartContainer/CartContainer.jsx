@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const ItemDetail = () => {
+export const CartContainer = () => {
   return (
     <div>
       
