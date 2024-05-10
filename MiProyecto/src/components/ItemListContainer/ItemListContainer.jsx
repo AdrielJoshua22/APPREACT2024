@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { mFetch } from "../../utils/mFetch"
 import './ItemListContainer.css'
 import { Contador } from "../contador/contador"
+import { Link } from "react-router-dom"
 
  export const ItemListContainer = ({greeting}) => {
     const [productos, setProductos] = useState([])
@@ -30,10 +31,12 @@ import { Contador } from "../contador/contador"
                             <label className="precio">Precio: {price}</label>
                             <label className="categoria">Categoria: {categoria}</label>
                         </div>
+                        <Link to='./detail'>
                         <div className="card-footer">
                             <button className="detalle">Detalle</button>
                             <Contador/>
                         </div>
+                        </Link>
                     </div>
                 ) 
             }
