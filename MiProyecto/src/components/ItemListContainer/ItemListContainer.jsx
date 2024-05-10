@@ -25,13 +25,13 @@ import { Link } from "react-router-dom"
                 : 
                 productos.map( ({id, foto, name, price, categoria}) =>  
                     <div key={id} className="card">
+                        <Link to={`/detail/${id}`}>
                         <img src={foto} className="card-img-top" alt="imagen-card" />
                         <div className="card-body">
                             <h6 className="nombre">Nombre: {name}</h6>
                             <label className="precio">Precio: {price}</label>
                             <label className="categoria">Categoria: {categoria}</label>
                         </div>
-                        <Link to='./detail'>
                         <div className="card-footer">
                             <button className="detalle">Detalle</button>
                             <Contador/>
