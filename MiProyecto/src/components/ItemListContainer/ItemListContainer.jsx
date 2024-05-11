@@ -1,26 +1,31 @@
 import { useEffect, useState } from "react"
-import { mFetch } from "../../utils/mFetch"
+ import { mFetch } from "../../utils/mFetch" 
 import './ItemListContainer.css'
 import { Contador } from "../contador/contador"
 import { Link } from "react-router-dom"
+import Spinner from '../Spinner/Spinner';
 
  export const ItemListContainer = ({greeting}) => {
     const [productos, setProductos] = useState([])
-    const [isLoading, setIsLoading] = useState(true)
+    const [loading, setLoading] = useState(true)
 
-    useEffect(()=>{
-        mFetch()
-        .then( resultado=> { 
-            setProductos(resultado)
-        })
-        .catch( error => console.log(error) )
-        .finally(()=> setIsLoading(false))
-    }, [])
+    useEffect(() => {
+        mFetch('https://api.example.com/data')
+          .then(response => response.json())
+          .then(productos => {
+            setProductos(productos);
+            setLoading(false);
+          });
+      }, []);
+
+      if (loading) {
+        return <Spinner />;
+      }
 
     console.log(productos)
     return (
         <div className="card-container">
-            { isLoading ?
+            { <Spinner/> ?
                 <h2>Cargando...</h2>
                 : 
                 productos.map( ({id, foto, name, price, categoria}) =>  
