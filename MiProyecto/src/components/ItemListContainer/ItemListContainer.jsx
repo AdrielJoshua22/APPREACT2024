@@ -10,11 +10,14 @@ export const ItemListContainer = ({greeting}) => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        setLoading(true);
         mFetch()
           .then(response => response.json())
           .then(productos => {
-            setProductos(productos);
-            setLoading(false);
+            setTimeout(() => {
+              setProductos(productos);
+              setLoading(false);
+            }, 1000); // Espera 1 segundo antes de mostrar los productos
           });
       }, []);
 
