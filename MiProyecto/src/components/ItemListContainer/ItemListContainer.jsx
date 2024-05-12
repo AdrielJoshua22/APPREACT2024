@@ -12,7 +12,6 @@ export const ItemListContainer = ({greeting}) => {
     useEffect(() => {
         setLoading(true);
         mFetch()
-          .then(response => response.json())
           .then(productos => {
             setTimeout(() => {
               setProductos(productos);
@@ -24,7 +23,7 @@ export const ItemListContainer = ({greeting}) => {
     console.log(productos);
     return (
         <div className="card-container">
-            {loading ? <Spinner /> : 
+            {loading ? <Spinner/> : 
                 productos.map( ({id, foto, name, price, categoria}) =>  
                     <div key={id} className="card">
                         <Link to={`/detail/${id}`}>
