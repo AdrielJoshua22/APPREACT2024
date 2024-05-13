@@ -26,7 +26,6 @@ export const ItemListContainer = ({greeting}) => {
             {loading ? <Spinner/> : 
                 productos.map( ({id, foto, name, price, categoria}) =>  
                     <div key={id} className="card">
-                        <Link to={`/detail/${id}`}>
                             <img src={foto} className="card-img-top" alt="imagen-card" />
                             <div className="card-body">
                                 <h6 className="nombre">Nombre: {name}</h6>
@@ -34,10 +33,11 @@ export const ItemListContainer = ({greeting}) => {
                                 <label className="categoria">Categoria: {categoria}</label>
                             </div>
                             <div className="card-footer">
+                        <Link to={`/detail/${id}`}>
                                 <button className="detalle">Detalle</button>
+                        </Link>
                                 <Contador/>
                             </div>
-                        </Link>
                     </div>
                 )
             }
