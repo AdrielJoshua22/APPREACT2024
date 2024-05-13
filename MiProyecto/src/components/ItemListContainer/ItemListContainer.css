@@ -6,18 +6,24 @@
   
 }
 
+
 .card {
   width: 300px;
+  height: 500px; /* Ajusta este valor según tus necesidades */
   border: 1px solid #ccc;
   border-radius: 5px;
   margin: 10px;
   padding: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-img-top {
   width: 100%;
-  height: auto;
+  height: 200px; /* Ajusta este valor según tus necesidades */
+  object-fit: cover;
 }
 
 .nombre, .precio, .categoria {
@@ -32,5 +38,4 @@
   margin: 20px;
   width: 80%;
   height: 20%;
-  
 }
