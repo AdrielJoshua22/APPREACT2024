@@ -1,11 +1,18 @@
-import React from 'react'
+import React from 'react';
 
-export const ItemDetail = () => {
+
+const ItemDetail = ({ item }) => {
   return (
-    <div>
-      
+    <div className="item-detail">
+      <h2>{item.name}</h2>
+      <p>{item.description}</p>
+      <ul>
+        <li>Precio: {item.price}</li>
+        <li>Categoría: {item.category}</li>
+        {}
+      </ul>
     </div>
-  )
-}
+  );
+};
 
-
+export default ItemDetail;
