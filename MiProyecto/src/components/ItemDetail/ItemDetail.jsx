@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const ItemDetail = ({ item }) => {
+ export const ItemDetail = ({ item }) => {
   return (
     <div className="item-detail">
       <h2>{item.name}</h2>
@@ -15,4 +15,3 @@ const ItemDetail = ({ item }) => {
   );
 };
 
-export default ItemDetail;
