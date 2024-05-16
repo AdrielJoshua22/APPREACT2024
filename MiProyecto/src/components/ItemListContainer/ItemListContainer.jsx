@@ -36,7 +36,7 @@ export const ItemListContainer = ({greeting}) => {
                         <Link to={`/detail/${id}`}>
                                 <button className="detalle">Detalle</button>
                         </Link>
-                                <Contador/>
+                             {/*    <Contador/> */}
                             </div>
                     </div>
                 )
