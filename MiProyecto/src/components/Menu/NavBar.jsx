@@ -5,8 +5,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 export function NavBar() {
-  return (
-    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary navBar" style={{ width: '100vw' }} >
+  return ( <div className='NavBar'>
+  <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary navBar" style={{ width: '100vw' }} >
         <Navbar.Brand href="#home">🍕🥟</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -33,6 +33,7 @@ export function NavBar() {
           </Nav>
         </Navbar.Collapse>
     </Navbar>
+  </div>
   );
 }
 

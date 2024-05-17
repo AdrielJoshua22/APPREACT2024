@@ -1,13 +1,12 @@
-.navBar{
-  background-color: #974141; /* Color de fondo del navbar */
-  position: fixed; /* Fija el navbar en su posición incluso al hacer scroll */
-  color: #992e2e; /* Color del texto en el navbar */
-  padding: 10px 0; /* Espacio interior en la parte superior e inferior del navbar */
-  width: 100%; /* Ancho del navbar (ocupa todo el ancho de la pantalla) */
-  left: 0; /* Posiciona el navbar a la izquierda de la pantalla */
+.NavBar{
+  background-color: #e43535; 
+  position: fixed; 
+  color: #992e2e; 
+  width: 100%; 
+  left: 0; 
   right: 0;
   box-sizing: border-box;
-  top: 0; /* Posiciona el navbar en la parte superior de la pantalla */
-  max-width: 100%; /* Asegura que el navbar no exceda el ancho de la pantalla */
+  top: 0; 
+  max-width: 100%; 
   z-index: 1000;
 }
