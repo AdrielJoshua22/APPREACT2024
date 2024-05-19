@@ -3,7 +3,7 @@ import './App.css'
 import { Footer } from './components/Footer/Footer'
 import NavBar from './components/Menu/NavBar'
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
-import { CartContainer } from './components/contador/CartContainer/CartContainer'
+import { CartContainer } from './components/CartContainer/CartContainer'
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer'
 
 
