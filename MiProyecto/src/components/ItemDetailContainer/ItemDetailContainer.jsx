@@ -1,18 +1,34 @@
-import React from 'react'
-import { ItemDetail } from '../ItemDetail/ItemDetail'
-import { useParams } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { mFetch } from '../../utils/mFetch';
+import { ItemDetail } from '../ItemDetail/ItemDetail';
 
 export const ItemDetailContainer = () => {
+  const { pid } = useParams();
+  const [producto, setProducto] = useState({});
+  const [loading, setLoading] = useState(true);
 
-  const { pid } = useParams()
-  console.log(pid)
+  useEffect(() => {
+    setLoading(true);
+    mFetch().then((productos) => {
+      const prod = productos.find((p) => p.id === pid);
+      setProducto(prod);
+      setLoading(false);
+    });
+  }, [pid]);
 
   return (
     <div>
-      <h2>componente funcionando!
-        esto es ItemDetailContainer
-      </h2>
-      <ItemDetail/>
+      {loading ? (
+        <p>Cargando...</p>
+      ) : (
+        <ItemDetail
+          title={producto.name}
+          imageUrl={producto.foto}
+          price={producto.price}
+          description={`Este es un(a) ${producto.categoria} llamado(a) ${producto.name}.`}
+        />
+      )}
     </div>
-  )
-}
+  );
+};
