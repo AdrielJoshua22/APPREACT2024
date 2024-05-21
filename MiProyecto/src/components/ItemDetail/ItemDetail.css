@@ -20,9 +20,10 @@
 }
 
 .item-info h2 {
-  font-size: 24px;
+  font-size: 50px;
   margin-bottom: 10px;
   padding: 75px;
+  margin: 20px;
 }
 
 .item-info .price {
