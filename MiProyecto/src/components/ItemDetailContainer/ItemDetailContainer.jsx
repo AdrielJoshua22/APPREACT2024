@@ -26,7 +26,8 @@ export const ItemDetailContainer = () => {
           title={producto.name}
           imageUrl={producto.foto}
           price={producto.price}
-          description={`Este es un(a) ${producto.categoria} llamado(a) ${producto.name}.`}
+          description={`Imaginá la sensación del clásico Cuarto de Libra. Imaginalo con un medallón de deliciosa carne 100% vacuna, queso cheddar, cebolla, kétchup y mostaza ¿Listo? Ahora duplicá esa sensación. Ya tenés el Doble Cuarto en la cabeza.`}
+          
         />
       )}
     </div>
