@@ -1,5 +1,6 @@
 import React from 'react';
 import './ItemDetail.css';
+import {Contador} from '../contador/contador'
 
 export const ItemDetail = ({ title, imageUrl, price, description }) => {
   return (
@@ -11,6 +12,7 @@ export const ItemDetail = ({ title, imageUrl, price, description }) => {
         <h2>{title}</h2>
         <p className="price">Precio: ${price}</p>
         <p>{description}</p>
+        <Contador/>
       </div>
     </div>
   );
