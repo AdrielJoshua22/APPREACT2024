@@ -3,7 +3,7 @@
   align-items: flex-start;
   gap: 20px; /* Ajusta el espacio entre la imagen y la información del producto */
   padding: 20px;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -12,6 +12,7 @@
   width: 300px; /* Ajusta el ancho de la imagen según tus necesidades */
   height: auto;
   border-radius: 10px;
+  position: center;
 }
 
 .item-info {
