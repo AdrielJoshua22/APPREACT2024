@@ -26,7 +26,7 @@ export function NavBar() {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">Como Llegar</Nav.Link>
+            <Nav.Link href="#deets">🛒</Nav.Link>
             <Nav.Link eventKey={2} href="#memes">
 
             </Nav.Link>
