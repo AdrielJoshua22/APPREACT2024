@@ -6,7 +6,7 @@ export function DarkVariantExample() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="holder.js/800x400?text=First slide&bg=f5f5f5"
+          src="./Img/img.jpg"
           alt="First slide"
         />
         <Carousel.Caption>
@@ -17,7 +17,7 @@ export function DarkVariantExample() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="holder.js/800x400?text=Second slide&bg=eee"
+          src="./Img/img.jpg"
           alt="Second slide"
         />
         <Carousel.Caption>
@@ -28,7 +28,7 @@ export function DarkVariantExample() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="holder.js/800x400?text=Third slide&bg=e5e5e5"
+          src="./Img/img.jpg"
           alt="Third slide"
         />
         <Carousel.Caption>
