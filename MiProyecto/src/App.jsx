@@ -11,7 +11,9 @@ function App() {
   return (
     <Router>
       <NavBar />
+      <br />
      <DarkVariantExample/> 
+     <br />
       <Routes>
         <Route path='/' element={<ItemListContainer greeting={'Hola soy item list container'} />} />
         <Route path='/detail/:pid' element={<ItemDetailContainer />} />
