@@ -5,13 +5,13 @@ import NavBar from './components/Menu/NavBar';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import { CartContainer } from './components/CartContainer/CartContainer';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
- import { ControlledCarousel } from './components/Carousel/Carousel'; 
+ import {  DarkVariantExample } from './components/Carousel/Carousel'; 
 
 function App() {
   return (
     <Router>
       <NavBar />
-     <ControlledCarousel/> 
+     <DarkVariantExample/> 
       <Routes>
         <Route path='/' element={<ItemListContainer greeting={'Hola soy item list container'} />} />
         <Route path='/detail/:pid' element={<ItemDetailContainer />} />
