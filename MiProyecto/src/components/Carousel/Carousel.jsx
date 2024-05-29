@@ -6,10 +6,10 @@ export function DarkVariantExample() {
     <Carousel data-bs-theme="dark">
       <Carousel.Item>
         <img
-          className="d-block h-75 w-100 h-75"
+          className="d-block w-100"
           src="./Img/img.jpg"
           alt="First slide"
-          style={{ height: '300px' }}
+          style={{ height: '400px' }} 
         />
         <Carousel.Caption>
          {/*  <h5>First slide label</h5>
@@ -21,6 +21,7 @@ export function DarkVariantExample() {
           className="d-block w-100"
           src="./Img/img2.jpg"
           alt="Second slide"
+          style={{ height: '400px' }} 
         />
         <Carousel.Caption>
        {/*    <h5>Second slide label</h5>
@@ -32,6 +33,7 @@ export function DarkVariantExample() {
           className="d-block w-100"
           src="./Img/img.jpg"
           alt="Third slide"
+          style={{ height: '400px' }} 
         />
         <Carousel.Caption>
      {/*      <h5>Third slide label</h5>
