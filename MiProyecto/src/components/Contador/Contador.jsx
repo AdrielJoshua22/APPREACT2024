@@ -1,6 +1,7 @@
 import { Container } from 'react-bootstrap'
 import { useCounter } from '../../Hooks/useCounter'
 import './contador.css'
+import { Link } from "react-router-dom";
 
 export const Contador = () => {
 
@@ -12,7 +13,7 @@ export const Contador = () => {
     <button className='contador' onClick={() => decrementar()}>-1</button>
     <button  className='contador' onClick={() => resetear()}>Reset</button>
     <button  className='contador' onClick={() => incrementar()}>+1</button>
-    <button  className='contador' onClick >Agregar a carrito</button>
+    <Link to={`/cart`}><button  className='contador' onClick >Agregar a carrito</button></Link>
     </Container>
   ) 
 }
