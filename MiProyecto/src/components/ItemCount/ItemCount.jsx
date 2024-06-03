@@ -9,6 +9,12 @@ export const ItemCount = () => {
     }
   return (
     <div>
+        {isCant ?
+            <ItemCount onAdd={onAdd}/>
+            :
+
+            <button>terminar compra</button>
+        }
       
     </div>
   )
