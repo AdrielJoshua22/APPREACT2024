@@ -1,7 +1,7 @@
 .item-detail-container {
   display: flex;
   align-items: flex-start;
-  gap: 20px; /* Ajusta el espacio entre la imagen y la información del producto */
+  gap: 20px; 
   padding: 20px;
   background-color: #ffffff;
   border-radius: 10px;
@@ -9,7 +9,7 @@
 }
 
 .item-image img {
-  width: 300px; /* Ajusta el ancho de la imagen según tus necesidades */
+  width: 300px; 
   height: auto;
   border-radius: 10px;
   position: center;
