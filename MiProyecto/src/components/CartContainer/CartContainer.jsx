@@ -1,13 +1,11 @@
 import React from 'react'
 
-export const CartContainer = ({ cartItems }) => {
+export const CartContainer = () => {
   return (
-    <div>
-      {cartItems.map((item) => (
-        <div key={item.id}>
-          {item.name}
-        </div>
-      ))}
-    </div>
+    <>
+      
+    </>
   )
 }
+
+
