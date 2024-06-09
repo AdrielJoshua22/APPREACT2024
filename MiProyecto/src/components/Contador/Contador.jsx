@@ -7,24 +7,17 @@ export const Contador = ({initial=1,stock=5,onAdd}) => {
 
   const {contador,incrementar,decrementar,resetear} = useCounter(initial,1,stock)
 
-function AddToCartButton({ product, addToCart }) {
-  const handleClick = () => {
-    addToCart(product);
+  const handleAddToCart = () => {
+    onAdd(contador);
   };
 
-  return (
-    <button onClick={handleClick}>
-      Agregar al carrito
-    </button>
-  );
-}
   return(
     <Container className='contador' >
      <h3> {contador}</h3> 
     <button className='contador' onClick={() => decrementar()}>-1</button>
     <button  className='contador' onClick={() => resetear()}>Reset</button>
     <button  className='contador' onClick={() => incrementar()}>+1</button>
-  <Link to={`/cart`}className='contador' onClick={()=>{onAdd( AddToCartButton)}} >Agregar a carrito</Link>
+    <Link to={`/cart`} className='contador' onClick={handleAddToCart} >Agregar a carrito</Link>
     </Container>
   ) 
 }
