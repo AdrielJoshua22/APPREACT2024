@@ -1,21 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { Contador } from './contador';
 
 export const ItemCount = () => {
-    const [isCant, setIsCant] = useState(false)
+    const [isCant, setIsCant] = useState(false);
+    const [cantidad, setCantidad] = useState(0);
 
-    const onAdd=()=>{
-        console.log('la cantidad seleccionada :',cantidad)
-        setIsCant(true)
+    const onAdd = (count) => {
+        console.log('la cantidad seleccionada :', count);
+        setCantidad(count);
+        setIsCant(true);
     }
-  return (
-    <div>
-        {isCant ?
-            <ItemCount onAdd={onAdd}/>
-            :
 
-            <button>terminar compra</button>
-        }
-      
-    </div>
-  )
+    return (
+        <div>
+            {isCant ?
+                <button>Terminar compra</button>
+                :
+                <Contador onAdd={onAdd} />
+            }
+        </div>
+    )
 }
