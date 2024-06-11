@@ -6,10 +6,16 @@ import { ItemListContainer } from './components/ItemListContainer/ItemListContai
 import { CartContainer } from './components/CartContainer/CartContainer';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
  import {  DarkVariantExample } from './components/Carousel/Carousel'; 
+import { createContext } from 'react';
 
 function App() {
+const ContextApp = createContext("joshua");
+console.log(ContextApp)
+
   return (
+    
     <Router>
+      <ContextApp ></ContextApp>
       <NavBar />
       <br />
      <DarkVariantExample/> 
