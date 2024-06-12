@@ -9,13 +9,13 @@ import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetail
 import { createContext } from 'react';
 
 function App() {
-const ContextApp = createContext("joshua");
+/* const ContextApp = createContext("joshua");
 console.log(ContextApp)
-
+ */
   return (
     
     <Router>
-      <ContextApp ></ContextApp>
+      {/* <ContextApp ></ContextApp> */}
       <NavBar />
       <br />
      <DarkVariantExample/> 
