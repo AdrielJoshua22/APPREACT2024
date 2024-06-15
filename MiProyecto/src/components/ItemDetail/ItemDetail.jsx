@@ -1,6 +1,6 @@
 import React from 'react';
 import './ItemDetail.css';
-import {Contador} from '../Contador/Contador'
+import {Contador} from '../contador/contador'
 import {useState} from 'react';
 
 
