@@ -6,16 +6,19 @@ import { ItemListContainer } from './components/ItemListContainer/ItemListContai
 import { CartContainer } from './components/CartContainer/CartContainer';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
  import {  DarkVariantExample } from './components/Carousel/Carousel'; 
-/* import { createContext } from 'react'; */
+import { createContext } from 'react'; 
+import { CartContext } from './context/cartContext';
 
 function App() {
-/* const ContextApp = createContext();
+const ContextApp = createContext();
 console.log(ContextApp)
- */
+
   return (
-    
+    <CartContext.Provider value={{
+
+    }}>
     <Router>
-      {/* <ContextApp ></ContextApp> */}
+     
       <NavBar />
       <br />
      <DarkVariantExample/> 
@@ -28,6 +31,7 @@ console.log(ContextApp)
       </Routes>
       <Footer />
     </Router>
+    </CartContext.Provider>
   );
 }
 
