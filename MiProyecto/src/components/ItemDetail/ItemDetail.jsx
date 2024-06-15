@@ -7,10 +7,10 @@ import {useState} from 'react';
 export const ItemDetail = ({ title, imageUrl, price, description }) => {
   const [isCant, setIsCant] = useState(false)
 
-   const onAdd= (cantidad)=>{
+/*    const onAdd= (cantidad)=>{
     console.log('cantidad seleccionada :',cantidad)
     setIsCant(true)
-  } 
+  }  */
 
   return (
    /*  !isCant ?
