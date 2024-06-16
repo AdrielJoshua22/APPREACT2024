@@ -1,31 +1,46 @@
-import React from 'react';
-import './ItemDetail.css';
-import {Contador} from '../contador/contador'
-import {useState} from 'react';
+import {  useState } from "react"
 
+import { useCartContext } from "../../context/cartContext"
+import ItemCount from "../ItemCount/ItemCount"
+import { Link } from "react-router-dom"
 
-export const ItemDetail = ({ title, imageUrl, price, description }) => {
-  const [isCant, setIsCant] = useState(false)
+export const ItemDetail = ({producto}) => {
+    const [isCant, setIsCant] = useState(false)
 
-/*    const onAdd= (cantidad)=>{
-    console.log('cantidad seleccionada :',cantidad)
-    setIsCant(true)
-  }  */
+    const {addToCart} = useCartContext()
 
-  return (
-   /*  !isCant ?
-    <Contador onAdd={onAdd}/>
-    : */
-    <div className="item-detail-container">
-      <div className="item-image">
-        <img src={imageUrl} alt={title} />
-      </div>
-      <div className="item-info">
-        <h2>{title}</h2>
-        <p className="price">Precio: ${price}</p>
-        <p>{description}</p>
-       <Contador/> 
-      </div>
-    </div>
-  );
-};
+    const onAdd = (cantidad)=>{
+        addToCart( { ...producto, cantidad } )
+        setIsCant(true)
+    }
+
+   
+
+    return (
+        <>
+            <div className="row">
+                <div className="col">
+                    <img src={producto.foto} className="w-50" alt="imagen" />
+                    <h3>Nombre: {producto.name}</h3>
+                    <h3>Categoría: {producto.categoria}</h3>
+                    <h3>Precio: {producto.precio}</h3>
+                    <h3>Stock: {producto.stock}</h3>
+                </div>
+                <div className="col">
+                    {
+                        !isCant ? 
+                            <ItemCount onAdd={onAdd}/>
+                        :
+                            <>
+                                <Link to={'/cart'} className="btn btn-outline-danger">Terminar compra</Link>
+                                <Link to={'/'} className="btn btn-outline-success">Seguir la compra</Link>
+                            </>
+                    }
+
+                </div>
+
+            </div>
+
+        </>
+    )
+}

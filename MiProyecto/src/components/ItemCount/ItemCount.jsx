@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Contador } from './contador';
+import { Contador } from '../contador/contador';
 
 export const ItemCount = () => {
     const [isCant, setIsCant] = useState(false);
