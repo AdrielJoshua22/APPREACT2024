@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Contador } from '../contador/contador';
 
-export const ItemCount = () => {
+ const ItemCount = () => {
     const [isCant, setIsCant] = useState(false);
     const [cantidad, setCantidad] = useState(0);
 
@@ -20,4 +20,6 @@ export const ItemCount = () => {
             }
         </div>
     )
+
 }
+export default ItemCount
