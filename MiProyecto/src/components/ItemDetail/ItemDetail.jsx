@@ -4,13 +4,13 @@ import ItemCount from "../ItemCount/ItemCount"
 import { Link } from "react-router-dom"
 
 
-export const ItemDetail = ({producto}) => {
+export const ItemDetail = ({productos}) => {
     const [isCant, setIsCant] = useState(false)
 
     const {addToCart} = useCartContext()
 
     const onAdd = (cantidad)=>{
-        addToCart( { ...producto, cantidad } )
+        addToCart( { ...productos, cantidad } )
         setIsCant(true)
     }
 
@@ -20,11 +20,11 @@ export const ItemDetail = ({producto}) => {
         <>
             <div className="row">
                 <div className="col">
-                    <img src={producto.foto} className="w-50" alt="imagen" />
-                    <h3>Nombre: {producto.name}</h3>
-                    <h3>Categoría: {producto.categoria}</h3>
-                    <h3>Precio: {producto.precio}</h3>
-                    <h3>Stock: {producto.stock}</h3>
+                    <img src={productos.foto} className="w-50" alt="imagen" />
+                    <h3>Nombre: {productos.name}</h3>
+                    <h3>Categoría: {productos.categoria}</h3>
+                    <h3>Precio: {productos.precio}</h3>
+                    <h3>Stock: {productos.stock}</h3>
                 </div>
                 <div className="col">
                     {
