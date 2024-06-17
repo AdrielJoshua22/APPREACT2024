@@ -1,9 +1,8 @@
 import {  useState } from "react"
-
-import { useCartContext } from "../../context/cartContext"
-import ItemCount from "../ItemCount/ItemCount";
-
+import { useCartContext } from "../../context/CartContext"
+import ItemCount from "../ItemCount/ItemCount"
 import { Link } from "react-router-dom"
+
 
 export const ItemDetail = ({producto}) => {
     const [isCant, setIsCant] = useState(false)

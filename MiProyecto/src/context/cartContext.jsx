@@ -3,10 +3,9 @@ import { createContext, useContext, useState } from "react"
 // exportar app
 
 
-
 const CartContext = createContext([])
 
-export const cartContext = () => useContext(CartContext)
+export const useCartContext = () => useContext(CartContext)
 
 export const CartContextProvider = ({children})=> {
     // estados y funciones globales

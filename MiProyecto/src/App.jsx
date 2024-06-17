@@ -7,7 +7,7 @@ import { CartContainer } from './components/CartContainer/CartContainer';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
  import {  DarkVariantExample } from './components/Carousel/Carousel'; 
 import { createContext } from 'react'; 
-import { CartContext } from './context/cartContext';
+import { CartContext } from './context/CartContext';
 
 function App() {
 const ContextApp = createContext();
