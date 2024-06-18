@@ -5,7 +5,7 @@ import NavBar from './components/Menu/NavBar';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import { CartContainer } from './components/CartContainer/CartContainer';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
- import {  DarkVariantExample } from './components/Carousel/Carousel'; 
+import {  DarkVariantExample } from './components/Carousel/Carousel'; 
 import { createContext } from 'react'; 
 import { CartContext } from './context/CartContext';
 
