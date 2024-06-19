@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useCartContext } from "../../context/CartContext"
 import ItemCount from "../ItemCount/ItemCount"
 import { Link } from "react-router-dom"
+import { Contador } from "../contador/contador"
 
 
 export const ItemDetail = ({ productos }) => {
@@ -18,29 +19,30 @@ export const ItemDetail = ({ productos }) => {
 
     return (
         <>
-            <div className="row">
-                <div className="col">
-                    {productos && productos.foto && <img src={productos.foto} className="w-50" alt="imagen" />}
-                    {productos && productos.name && <h3>Nombre: {productos.name}</h3>}
-
-                    {/*   <h3>Categoría: {productos.categoria}</h3>
-                    <h3>Precio: {productos.precio}</h3>
-                    <h3>Stock: {productos.stock}</h3> */}
+            <div className="item-detail-container">
+                <div className="item-image">
+                    <img src={imageUrl} alt={title} />
                 </div>
-                <div className="col">
-                    {
-                        !isCant ?
-                            <ItemCount onAdd={onAdd} />
-                            :
-                            <>
-                                <Link to={'/cart'} className="btn btn-outline-danger">Terminar compra</Link>
-                                <Link to={'/'} className="btn btn-outline-success">Seguir la compra</Link>
-                            </>
-                    }
-
+                <div className="item-info">
+                    <h2>{title}</h2>
+                    <p className="price">Precio: ${price}</p>
+                    <p>{description}</p>
+                    <Contador />
                 </div>
-
             </div>
+            {
+                !isCant ?
+                    <ItemCount onAdd={onAdd} />
+                    :
+                    <>
+                        <Link to={'/cart'} className="btn btn-outline-danger">Terminar compra</Link>
+                        <Link to={'/'} className="btn btn-outline-success">Seguir la compra</Link>
+                    </>
+            }
+
+      
+
+          
 
         </>
     )
