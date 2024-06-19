@@ -19,7 +19,7 @@ export const Footer = () => {
           </div>
           <div className="footer-column">
             <h3>Contacto</h3>
-            <p>Dirección: Calle Ejemplo, La Plata, Made In Argentina</p>
+            <p>Dirección: Calle , La Plata, Made In Argentina</p>
             <p>Teléfono: +123456789</p>
             <p>Email: info@example.com</p>
           </div>
