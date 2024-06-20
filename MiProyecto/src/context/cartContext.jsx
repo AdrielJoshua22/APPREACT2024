@@ -1,6 +1,4 @@
 import { createContext, useContext, useState } from "react"
-// crear un contexto inicializado con []
-// exportar app
 
 
 export const CartContext = createContext([])
