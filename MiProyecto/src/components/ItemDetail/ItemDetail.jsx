@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 import { Contador } from "../contador/contador"
 
 
-export const ItemDetail = ({ productos }) => {
+export const ItemDetail = ({ title, imageUrl, price, description  }) => {
     const [isCant, setIsCant] = useState(false)
 
     const { addToCart } = useCartContext()
@@ -27,7 +27,6 @@ export const ItemDetail = ({ productos }) => {
                     <h2>{title}</h2>
                     <p className="price">Precio: ${price}</p>
                     <p>{description}</p>
-                    <Contador />
                 </div>
             </div>
             {
