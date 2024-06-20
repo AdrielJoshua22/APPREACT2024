@@ -8,6 +8,7 @@ import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetail
 import { DarkVariantExample } from './components/Carousel/Carousel';
 import { createContext } from 'react';
 import { CartContextProvider } from './context/CartContext';
+import { ItemDetail } from './components/ItemDetail/ItemDetail';
 
 function App() {
   const ContextApp = createContext();
@@ -26,7 +27,7 @@ function App() {
           <Route path='/' element={<ItemListContainer greeting={'Hola soy item list container'} />} />
           <Route path='/detail/:pid' element={<ItemDetailContainer />} />
           <Route path='/cart' element={<CartContainer />} />
-          {/*   <Route path='/details' element={<ItemDetaiL/>}/> */}
+          <Route path='/details' element={<ItemDetail />} />
         </Routes>
         <Footer />
       </Router>
