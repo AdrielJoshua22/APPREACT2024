@@ -1,35 +1,33 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { mFetch } from '../../utils/mFetch';
-import { ItemDetail } from '../ItemDetail/ItemDetail';
+import { useParams } from "react-router-dom"
+import { ItemDetail } from "../ItemDetail/ItemDetail"
+import { useEffect, useState } from "react"
+import { mFetch } from "../../utils/mFetch"
 
 export const ItemDetailContainer = () => {
-  const { pid } = useParams();
-  const [producto, setProducto] = useState({});
-  const [loading, setLoading] = useState(true);
+    const [producto, setProducto] = useState({})
+    const [isLoading, setIsLoading] = useState(true)
+    const { pid } = useParams() // pid
 
-  useEffect(() => {
-    setLoading(true);
-    mFetch().then((productos) => {
-      const prod = productos.find((p) => p.id === pid);
-      setProducto(prod);
-      setLoading(false);
-    });
-  }, [pid]);
+    useEffect(()=>{ // efecto secundarío 
 
-  return (
-    <div>
-      {loading ? (
-        <p>Cargando...</p>
-      ) : (
-        <ItemDetail
-          title={producto.name}
-          imageUrl={producto.foto}
-          price={producto.price}
-          description={`Imaginá la sensación del clásico Cuarto de Libra. Imaginalo con un medallón de deliciosa carne 100% vacuna, queso cheddar, cebolla, kétchup y mostaza ¿Listo? Ahora duplicá esa sensación. Ya tenés el Doble Cuarto en la cabeza.`}
-          
-        />
-      )}
-    </div>
-  );
-};
+        mFetch(pid)
+        .then(resp => setProducto(resp))
+        .catch(err => console.log(err))
+        .finally(()=> setIsLoading(false))
+
+    }, [])
+    
+
+    console.log(pid)
+    return (
+        <div 
+            // className="border border-5 border-primary  m-3" 
+        >
+            {isLoading ? 
+                <h2>Cargando...</h2>
+            :
+                <ItemDetail producto={producto} />            
+            }            
+        </div>
+    )
+}
