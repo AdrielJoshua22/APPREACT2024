@@ -21,7 +21,7 @@ function App() {
 
         <NavBar />
         <br />
-        <DarkVariantExample />
+        <DarkVariantExample /> 
         <br />
         <Routes>
           <Route path='/' element={<ItemListContainer greeting={'Hola soy item list container'} />} />
