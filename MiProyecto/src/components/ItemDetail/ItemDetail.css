@@ -3,16 +3,16 @@
   align-items: flex-start;
   gap: 20px; 
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #ca2121;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .item-image img {
-  width: 300px; 
+  width: 100px; 
   height: auto;
   border-radius: 10px;
-  position: center;
+  margin: 0 auto;
 }
 
 .item-info {
@@ -23,13 +23,13 @@
 .item-info h2 {
   font-size: 50px;
   margin-bottom: 10px;
-  padding: 75px;
+ /*  padding: 75px; */
   margin: 20px;
 }
 
 .item-info .price {
   font-size: 20px;
-  color: #ff2626;
+  color: #e7b7b7;
   font-weight: bold;
   margin-bottom: 10px;
 }
