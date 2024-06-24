@@ -6,9 +6,9 @@ import { mFetch } from "../../utils/mFetch"
 export const ItemDetailContainer = () => {
     const [producto, setProducto] = useState({})
     const [isLoading, setIsLoading] = useState(true)
-    const { pid } = useParams() // pid
+    const { pid } = useParams() 
 
-    useEffect(()=>{ // efecto secundarío 
+    useEffect(()=>{ 
 
         mFetch(pid)
         .then(resp => setProducto(resp))
