@@ -29,9 +29,7 @@ useEffect(()=>{
 
     console.log(pid)
     return (
-        <div 
-            // className="border border-5 border-primary  m-3" 
-        >
+        <div>
             {isLoading ? 
                 <h2>Cargando...</h2>
             :
