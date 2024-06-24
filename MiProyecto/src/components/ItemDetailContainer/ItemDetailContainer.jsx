@@ -26,7 +26,12 @@ export const ItemDetailContainer = () => {
             {isLoading ? 
                 <h2>Cargando...</h2>
             :
-                <ItemDetail producto={producto} />            
+                <ItemDetail 
+                title={producto.name}
+                imageUrl={producto.foto}
+                price={producto.price}
+                description={'imagina la sensacion del clasico cuarto de libra...s'} 
+                producto={producto}/>            
             }            
         </div>
     )
