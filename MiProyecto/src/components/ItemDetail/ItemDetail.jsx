@@ -6,12 +6,14 @@ import "./ItemDetail.css";
 
 export const ItemDetail = ({ title, imageUrl, price, description }) => {
   const [isCant, setIsCant] = useState(false);
-  const { addToCart } = useCartContext();
+
+  const { addToCart, cartList } = useCartContext();
 
   const onAdd = (cantidad) => {
     addToCart({ title, imageUrl, price, description, cantidad });
     setIsCant(true);
   };
+  console.log(cartList)
 
   return (
     <>
