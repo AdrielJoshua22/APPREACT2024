@@ -12,7 +12,7 @@ export const ItemDetail = ({ title, imageUrl, price, description }) => {
     addToCart({ title, imageUrl, price, description, cantidad });
     setIsCant(true);
   };
-
+console.log(cartList)
   return (
     <>
       <div className="item-detail-container">
