@@ -1,5 +1,4 @@
 import { memo } from "react"
-import { propTypes } from "react-bootstrap/esm/Image"
 import { Link } from "react-router-dom"
 
 
