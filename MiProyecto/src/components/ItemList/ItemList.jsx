@@ -2,7 +2,7 @@ import {useState, memo} from 'react'
 import Item from '../Item/Item'
 
 
-// memo(()=>{}, arg2)
+
 const ItemList =memo(({items}) =>{                 
        
                console.log('item list')
