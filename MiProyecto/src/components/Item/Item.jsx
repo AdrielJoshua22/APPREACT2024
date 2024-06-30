@@ -1,4 +1,4 @@
-import { memo } from "react"
+/* import { memo } from "react"
 import { Link } from "react-router-dom"
 
 
@@ -18,4 +18,4 @@ const Item = memo( ({id,foto, name, price, categoria}) => {
     }
 )
 
-export default Item
+export default Item */
