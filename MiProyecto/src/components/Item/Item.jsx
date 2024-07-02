@@ -10,7 +10,7 @@ const Item = memo( ({id,foto, name, price, categoria}) => {
                         <img src={foto} className="card-img-top" alt="imagen-card" />
                     </Link>
                 <div className="card-body">
-                    <h6>Nombre: {name}</h6>
+                    <h3>Nombre: {name}</h3>
                     <label>Precio: {price}</label>
                     <label>Categoria: {categoria}</label>
                 </div>
