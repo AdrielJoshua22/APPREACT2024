@@ -29,12 +29,12 @@ console.log(cartList)
         <ItemCount onAdd={onAdd} />
       ) : (
         <>
-          {/* <Link to={"/cart"} className="btn btn-outline-danger">
+          <Link to={"/cart"} className="btn btn-outline-danger">
             Terminar compra
           </Link>
           <Link to={"/"} className="btn btn-outline-success">
             Seguir la compra
-          </Link> */}
+          </Link>
         </>
       )}
     </>
