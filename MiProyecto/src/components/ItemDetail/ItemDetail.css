@@ -9,7 +9,7 @@
 } 
 
 .item-image img {
-  width: 300px; 
+  width: auto; 
   height: auto;
   border-radius: 10px;
   position: center;
