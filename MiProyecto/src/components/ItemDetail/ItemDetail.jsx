@@ -28,10 +28,10 @@ console.log(cartList)
       {!isCant ? (
         <ItemCount onAdd={onAdd} />
       ) : (
-         <>
+         <><button>
           <Link to={"/cart"} className="btn btn-outline-danger">
             Terminar compra
-          </Link>
+          </Link></button>
           <Link to={"/"} className="btn btn-outline-success">
             Seguir la compra
           </Link>
