@@ -6,13 +6,13 @@ import "./ItemDetail.css";
 
 export const ItemDetail = ({ title, imageUrl, price, description }) => {
   const [isCant, setIsCant] = useState(false);
-  const { addToCart,cartList} = useCartContext();
+  const { addToCart } = useCartContext();
 
   const onAdd = (cantidad) => {
     addToCart({ title, imageUrl, price, description, cantidad });
     setIsCant(true);
   };
-console.log(cartList)
+
   return (
     <>
       <div className="item-detail-container">
@@ -28,14 +28,14 @@ console.log(cartList)
       {!isCant ? (
         <ItemCount onAdd={onAdd} />
       ) : (
-         <><button>
+        <>
           <Link to={"/cart"} className="btn btn-outline-danger">
             Terminar compra
-          </Link></button>
+          </Link>
           <Link to={"/"} className="btn btn-outline-success">
             Seguir la compra
           </Link>
-        </> 
+        </>
       )}
     </>
   );
