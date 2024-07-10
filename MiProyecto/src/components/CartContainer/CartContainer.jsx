@@ -1,5 +1,7 @@
+import useCartContext from '../../context/CartContext'
+
 export const CartContainer = () => {
-    const { cartList, vaciarCarrito } = useCartContext();
+    const { cartList, vaciarCarrito } = useCartContext()
 
     if (cartList.length === 0) {
         return <p>El carrito está vacío.</p>;
