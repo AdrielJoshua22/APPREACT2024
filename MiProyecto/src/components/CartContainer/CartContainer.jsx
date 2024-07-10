@@ -1,8 +1,9 @@
 import { useCartContext } from "../../context/CartContext"
 
 
+
 export const CartContainer = () => {
-    const {cartList,  vaciarCarrtio} = useCartContext
+    const {cartList,  vaciarCarrtio} = useCartContext()
 
     return (
         <div>
