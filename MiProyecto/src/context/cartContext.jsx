@@ -8,14 +8,24 @@ export const CartContextProvider = ({children})=> {
 
     const [cartList, setCartList] = useState([])
 
-    const addToCart = (newProduct)=>{
-  
-        setCartList([
-            ...cartList,
-            newProduct
-        ])
-    }
-    const vaciarCarrtio = () => {
+    const addToCart = (newProduct) => {
+        const index = cartList.findIndex(item => item.id === newProduct.id);
+        if (index !== -1) {
+            // El producto ya existe en el carrito, actualiza la cantidad
+            const updatedCartList = cartList.map((item, idx) => {
+                if (idx === index) {
+                    return { ...item, cantidad: item.cantidad + newProduct.cantidad };
+                }
+                return item;
+            });
+            setCartList(updatedCartList);
+        } else {
+            // El producto no está en el carrito, agrégalo
+            setCartList([...cartList, newProduct]);
+        }
+    };
+    
+    const vaciarCarrito = () => {
         setCartList([])
     }
 
@@ -23,7 +33,7 @@ export const CartContextProvider = ({children})=> {
        <CartContext.Provider value={{
             cartList,
             addToCart,
-            vaciarCarrtio
+            vaciarCarrito
        }}>
             {children}
        </CartContext.Provider>
