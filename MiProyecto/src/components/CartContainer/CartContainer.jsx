@@ -1,7 +1,7 @@
-import {useCartContext} from '../../context/cartContext.jsx'
+import { useCartContext } from '../../context/CartContext.jsx';
 
 export const CartContainer = () => {
-    const { cartList, vaciarCarrito } = useCartContext()
+    const { cartList, vaciarCarrito } = useCartContext();
 
     if (cartList.length === 0) {
         return <p>El carrito está vacío.</p>;
@@ -11,7 +11,7 @@ export const CartContainer = () => {
         <div>
             {cartList.map((prod, index) => (
                 <div key={index} className="w-50">
-                    <img className="w-25" src={prod.foto} alt="imagen del producto"/>
+                    <img className="w-25" src={prod.foto} alt="imagen del producto" />
                     <label> Precio: {prod.price} - Cantidad: {prod.cantidad}</label>
                     <button> X </button>
                 </div>
