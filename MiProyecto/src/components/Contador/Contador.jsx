@@ -1,13 +1,14 @@
-import { Container } from 'react-bootstrap';
-import { useCounter } from '../../Hooks/useCounter';
-import './contador.css';
 
+
+import { useHistory } from "react-router-dom";
 
 export const Contador = ({ initial = 1, stock = 5, onAdd }) => {
     const { contador, incrementar, decrementar, resetear } = useCounter(initial, 1, stock);
+    const history = useHistory();
 
     const handleAddToCart = () => {
         onAdd(contador);
+        history.push('/cart');
     };
 
     return (
