@@ -8,15 +8,6 @@ export const ItemDetailContainer = () => {
     const [isLoading, setIsLoading] = useState(true)
     const { pid } = useParams() 
 
-/*     useEffect(()=>{ 
-
-        mFetch(pid)
-        .then(resp => setProducto(resp))
-        .catch(err => console.log(err))
-        .finally(()=> setIsLoading(false))
-
-    }, []) */
-    
 useEffect(()=>{
     setIsLoading(true);
     mFetch().then((productos)=>{
