@@ -1,4 +1,4 @@
-import {useCartContext} from '../../context/CartContext.jsx'
+import {useCartContext} from '../../context/cartContext.jsx'
 
 export const CartContainer = () => {
     const { cartList, vaciarCarrito } = useCartContext()
