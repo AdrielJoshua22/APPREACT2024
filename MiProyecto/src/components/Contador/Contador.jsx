@@ -1,23 +1,22 @@
-import { Container } from 'react-bootstrap'
-import { useCounter } from '../../Hooks/useCounter'
-import './contador.css'
+import { Container } from 'react-bootstrap';
+import { useCounter } from '../../Hooks/useCounter';
+import './contador.css';
 import { Link } from "react-router-dom";
 
-export const Contador = ({initial=1,stock=5,onAdd}) => {
+export const Contador = ({ initial = 1, stock = 5, onAdd }) => {
+    const { contador, incrementar, decrementar, resetear } = useCounter(initial, 1, stock);
 
-  const {contador,incrementar,decrementar,resetear} = useCounter(initial,1,stock)
+    const handleAddToCart = () => {
+        onAdd(contador);
+    };
 
-  const handleAddToCart = () => {
-    onAdd(contador);
-  };
-
-  return(
-    <Container className='contador' >
-     <h3> {contador}</h3> 
-    <button className='contador' onClick={() => decrementar()}>-1</button>
-    <button  className='contador' onClick={() => resetear()}>Reset</button>
-    <button  className='contador' onClick={() => incrementar()}>+1</button>
-    <Link to={`/cart`} className='contador' onClick={handleAddToCart} >Agregar a carrito</Link>
-    </Container>
-  ) 
-}
+    return (
+        <Container className='contador'>
+            <h3>{contador}</h3>
+            <button className='contador' onClick={() => decrementar()}>-1</button>
+            <button className='contador' onClick={() => resetear()}>Reset</button>
+            <button className='contador' onClick={() => incrementar()}>+1</button>
+            <Link to={`/cart`} className='contador' onClick={handleAddToCart}>Agregar a carrito</Link>
+        </Container>
+    );
+};
