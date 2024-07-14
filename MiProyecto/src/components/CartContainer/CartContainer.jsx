@@ -4,10 +4,10 @@ import { useCartContext } from "../../context/CartContext.jsx";
 export const CartContainer = () => {
     const { cartList, vaciarCarrito } = useCartContext();
 
-    if (cartList.length === 0) {
+  /*   if (cartList.length === 0) {
         return <p>El carrito está vacío.</p>;
     }
-
+ */
     return (
         <div>
             {cartList.map((prod, index) => (
