@@ -1,6 +1,8 @@
-import { useCounter } from "../../hook/useCounter"
 
-const ItemCount = ({ inital=1, stock=5, onAdd }) => {
+
+import { useCounter } from "../../Hook/useCounter"
+
+export const ItemCount = ({ inital=1, stock=5, onAdd }) => {
 
     const { counter, handleSumar, handleRestar } = useCounter(inital, 1, stock)
 

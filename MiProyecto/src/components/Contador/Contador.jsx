@@ -1,5 +1,5 @@
 import { Container } from 'react-bootstrap';
-import { useCounter } from '../../Hooks/useCounter';
+import { useCounter } from '../../hook/useCounter';
 import './contador.css';
 
 
