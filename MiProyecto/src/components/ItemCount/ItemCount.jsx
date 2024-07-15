@@ -1,25 +1,17 @@
-import React, { useState } from 'react';
-import { Contador } from '../contador/contador';
+import { useCounter } from "../../hook/useCounter"
 
- const ItemCount = () => {
-    const [isCant, setIsCant] = useState(false);
-    const [cantidad, setCantidad] = useState(0);
+const ItemCount = ({ inital=1, stock=5, onAdd }) => {
 
-    const onAdd = (count) => {
-        console.log('la cantidad seleccionada :', count);
-        setCantidad(count);
-        setIsCant(true);
-    }
+    const { counter, handleSumar, handleRestar } = useCounter(inital, 1, stock)
 
     return (
-        <div>
-            {isCant ?
-                <button>Terminar compra</button>
-                :
-                <Contador onAdd={onAdd} />
-            }
-        </div>
+        <center>
+            <button onClick={handleSumar}> + 1</button> 
+            <label>{counter}</label>
+            {/* <p>cantidad de renderizados: {renderCount.current}</p> */}
+            <button onClick={handleRestar}> - 1</button> 
+            <button onClick={ ()=>{onAdd(counter)} }>Agregar al carrito</button>
+        </center>
     )
-
 }
-export default ItemCount
+
