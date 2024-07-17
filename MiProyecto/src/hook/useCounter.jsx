@@ -1,22 +1,25 @@
-import { useState } from "react"
+import React, { useState } from 'react'
 
-export const useCounter = (inital = 0, min, max) => { // custom hook
-    const [ counter, setCounter ] = useState(inital)
+export const useCounter = (valorInicial = 1) => {
+    const [counter, setcounter] = useState(1)
 
-    // console.log(renderCount)
-    let handleSumar = () => {
-        if (counter < max) {
-            setCounter(counter + 1)        
-            
-        }        
+    const incrementar = (valor = 1) => {
+        setcounter(counter + valor)
+    }
+    const decrementar = (valor = 1) => {
+        if (counter > 1) {
+            setcounter(counter - valor)
+        }
+    }
+        const resetear = () => {
+            setcounter(valorInicial)
+        }
+
+        return {
+            counter,
+            incrementar,
+            decrementar,
+            resetear
+        }
     }
 
-    let handleRestar = () => {        
-        if (counter > min) { // 1>1
-            setCounter(counter - 1)            
-        }        
-    }
-
-    return {counter, handleSumar, handleRestar }
-
-}
