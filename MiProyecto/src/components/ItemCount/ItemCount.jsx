@@ -7,8 +7,7 @@ const ItemCount = ({ inital=1, stock=5, onAdd }) => {
     return (
         <center>
             <button onClick={handleSumar}> + 1</button> 
-            <label>{counter}</label>
-            {/* <p>cantidad de renderizados: {renderCount.current}</p> */}
+            <h3>{counter}</h3>
             <button onClick={handleRestar}> - 1</button> 
             <button onClick={ ()=>{onAdd(counter)} }>Agregar al carrito</button>
         </center>
