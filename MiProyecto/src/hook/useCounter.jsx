@@ -1,29 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
 export const useCounter = (valorInicial = 1) => {
-  const [counter, setCounter] = useState(valorInicial);
+    const [counter, setcounter] = useState(1)
 
-  const incrementar = (valor = 1) => {
-    setCounter(prevCounter => prevCounter + valor);
-  };
+    const incrementar = (valor = 1) => {
+        setcounter(counter + valor)
+    }
+    const decrementar = (valor = 1) => {
+        if (counter > 1) {
+            setcounter(counter - valor)
+        }
+    }
+        const resetear = () => {
+            setcounter(valorInicial)
+        }
 
-  const decrementar = (valor = 1) => {
-    setCounter(prevCounter => {
-      if (prevCounter > 1) {
-        return prevCounter - valor;
-      }
-      return prevCounter;
-    });
-  };
+        return {
+            counter,
+            incrementar,
+            decrementar,
+            resetear
+        }
+    }
 
-  const resetear = () => {
-    setCounter(valorInicial);
-  };
-
-  return {
-    counter,
-    incrementar,
-    decrementar,
-    resetear
-  };
-};
