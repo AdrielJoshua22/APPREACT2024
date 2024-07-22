@@ -1,8 +1,8 @@
 import { useCounter } from "../../hook/useCounter.jsx"
 
-const ItemCount = ({ inital=1, stock=5, onAdd }) => {
+const ItemCount = ({ initial=1, stock=5, onAdd }) => {
 
-    const { counter, incrementar, decrementar } = useCounter(inital, 1, stock);
+    const { counter, incrementar, decrementar } = useCounter(initial, 1, stock);
 
     return (
         <center>
