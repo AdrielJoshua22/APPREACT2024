@@ -1,4 +1,4 @@
-/* import { Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import { useCounter } from '../../hook/useCounter';
 import './contador.css';
 
@@ -19,6 +19,6 @@ export const counter = ({ initial = 1, stock = 5, onAdd }) => {
             <button className='counter' onClick={handleAddToCart}>Agregar a carrito</button>
         </Container>
     );
-}; */
+};
 
 
