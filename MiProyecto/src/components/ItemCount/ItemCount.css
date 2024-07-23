@@ -1,0 +1,18 @@
+.counter{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+
+}
+
+.h3{
+    background-color: red;
+    font-size: 100%;
+}
+
+

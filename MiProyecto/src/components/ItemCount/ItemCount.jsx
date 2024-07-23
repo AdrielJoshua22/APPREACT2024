@@ -1,5 +1,5 @@
 import { useCounter } from "../../hook/useCounter.jsx"
-
+import "./ItemCount.css"
 const ItemCount = ({ initial=1, stock=5, onAdd }) => {
 
     const { counter, incrementar, decrementar } = useCounter(initial, 1, stock);
