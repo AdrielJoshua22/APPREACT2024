@@ -5,7 +5,7 @@ const ItemCount = ({ initial = 1, stock = 5, onAdd }) => {
     const { contador, incrementar, decrementar } = useCounter(initial, stock);
 
     const handleAdd = () => {
-        const count = Number(contador); // Asegúrate de que contador es un número
+        const count = Number(contador); 
         onAdd(count);
     };
 
